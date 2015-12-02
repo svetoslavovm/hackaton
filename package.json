@@ -1,0 +1,24 @@
+{
+  "name": "hackton-commons",
+  "version": "0.0.0",
+  "description": "Hackton Commons Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svetoslavovm/hackaton.git"
+  },
+  "keywords": [
+    "hackatons",
+    "legal",
+    "documentation"
+  ],
+  "author": "Martin Svetoslavov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svetoslavovm/hackaton/issues"
+  },
+  "homepage": "https://github.com/svetoslavovm/hackaton#readme"
+}
