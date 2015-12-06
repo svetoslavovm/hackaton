@@ -1,0 +1,11 @@
+/**
+ * global.scss - This files contains references to all .scss files compiled via gulp
+ * ==========
+ *
+ * !! IMPORTANT !! - Always use absolute paths for static resources references (images, fonts, etc)
+ *
+ */
+
+//Fonts
+@import "main";
+@import "normalize.min";
