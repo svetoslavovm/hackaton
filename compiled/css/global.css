@@ -264,11 +264,13 @@ nav {
       nav ul a.current {
         border-bottom: 2px solid #58a643; }
 
-div.text {
+div.text,
+section.text {
   background-color: #dadfea;
   padding: 30px 0;
   text-align: center; }
-  div.text h2 {
+  div.text h2,
+  section.text h2 {
     margin-bottom: 15px; }
 
 div.centered-images {
@@ -459,6 +461,21 @@ div.types-ownership {
     margin: 20px 0 0;
     padding: 12px 0 8px;
     text-transform: uppercase; }
+
+section.open-source {
+  background-color: #f3f5f6;
+  margin: auto;
+  padding: 0 25%;
+  text-align: left; }
+  section.open-source h2 {
+    font-size: 30px;
+    padding-bottom: 10px; }
+  section.open-source h3 {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 20px; }
+  section.open-source p {
+    margin-bottom: 15px; }
 
 /* ==========================================================================
    Media Queries
