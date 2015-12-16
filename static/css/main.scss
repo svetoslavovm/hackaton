@@ -146,13 +146,13 @@ div.centered-images {
       flex-grow: 1;
     }
   }
+}
 
-  button {
-    background-color: #7bf15b;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
-    padding: 5px 10px;
-  }
+button.green {
+  background-color: #7bf15b;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 
 div.agreement {
@@ -198,6 +198,11 @@ div.two-column {
 
 div.join {
   background-color: #fff;
+
+  input {
+    padding: 5px 15px;
+    margin-bottom: 20px;
+  }
 }
 
 footer {
@@ -222,6 +227,11 @@ section.subnav {
     li {
       background-color: #dadfea;
       padding: 20px;
+      margin-right: 5px;
+
+      &:last-child {
+        margin:0;
+      }
     }
 
     a {
@@ -255,12 +265,14 @@ div.narrow {
 
 div.types-ownership {
   background-color: #f3f5f6;
+  padding-bottom: 0;
 
   p {
     text-align: center;
     margin: auto;
     width: 60%;
   }
+
   > div {
     margin: auto;
     padding-top: 20px;
@@ -305,14 +317,28 @@ div.types-ownership {
 }
 
 section.open-source {
+  background: url(/img/open-source.png) 16% 30px no-repeat;
   background-color: #f3f5f6;
+  background-size: 70px 70px;
   margin: auto;
-  padding: 0 25%;
+  padding: 45px 25% 30px;
   text-align: left;
+
+  &.negotiated {
+    background: url(/img/negotiated-ownership.png) 16% 30px no-repeat;
+    background-color: #fff;
+    background-size: 70px 70px;
+  }
 
   h2 {
     font-size: 30px;
     padding-bottom: 10px;
+
+    &.second {
+      border-top: 1px solid #d1d1d1;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
   }
 
   h3 {
@@ -323,6 +349,47 @@ section.open-source {
 
   p {
     margin-bottom: 15px;
+  }
+}
+
+.git-links {
+  @include flexbox;
+  @include justify-content(space-between);
+
+  > div {
+    width: 50%;
+  }
+
+  h4 {
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      background-color: #7bf15b;
+      border: 1px solid #b3b3b3;
+      float: left;
+      padding: 10px 15px;
+
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+
+      a {
+        letter-spacing: 1px;
+      }
+    }
   }
 }
 

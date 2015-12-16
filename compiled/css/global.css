@@ -305,11 +305,12 @@ div.centered-images {
       padding-top: 10%; }
     div.centered-images > div > div {
       flex-grow: 1; }
-  div.centered-images button {
-    background-color: #7bf15b;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
-    padding: 5px 10px; }
+
+button.green {
+  background-color: #7bf15b;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  padding: 5px 10px; }
 
 div.agreement {
   background: #fff; }
@@ -359,6 +360,9 @@ div.two-column {
 
 div.join {
   background-color: #fff; }
+  div.join input {
+    padding: 5px 15px;
+    margin-bottom: 20px; }
 
 footer {
   background-color: #000;
@@ -397,7 +401,10 @@ section.subnav {
     margin: 0; }
     section.subnav ul li {
       background-color: #dadfea;
-      padding: 20px; }
+      padding: 20px;
+      margin-right: 5px; }
+      section.subnav ul li:last-child {
+        margin: 0; }
     section.subnav ul a {
       display: block; }
   section.subnav h3 {
@@ -418,7 +425,8 @@ div.narrow {
     width: 50%; }
 
 div.types-ownership {
-  background-color: #f3f5f6; }
+  background-color: #f3f5f6;
+  padding-bottom: 0; }
   div.types-ownership p {
     text-align: center;
     margin: auto;
@@ -463,19 +471,62 @@ div.types-ownership {
     text-transform: uppercase; }
 
 section.open-source {
+  background: url(/img/open-source.png) 16% 30px no-repeat;
   background-color: #f3f5f6;
+  background-size: 70px 70px;
   margin: auto;
-  padding: 0 25%;
+  padding: 45px 25% 30px;
   text-align: left; }
+  section.open-source.negotiated {
+    background: url(/img/negotiated-ownership.png) 16% 30px no-repeat;
+    background-color: #fff;
+    background-size: 70px 70px; }
   section.open-source h2 {
     font-size: 30px;
     padding-bottom: 10px; }
+    section.open-source h2.second {
+      border-top: 1px solid #d1d1d1;
+      margin-top: 20px;
+      padding-top: 20px; }
   section.open-source h3 {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 20px; }
   section.open-source p {
     margin-bottom: 15px; }
+
+.git-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+  .git-links > div {
+    width: 50%; }
+  .git-links h4 {
+    letter-spacing: 2px;
+    margin-bottom: 10px; }
+  .git-links ul {
+    padding: 0;
+    margin: 0; }
+    .git-links ul li {
+      background-color: #7bf15b;
+      border: 1px solid #b3b3b3;
+      float: left;
+      padding: 10px 15px; }
+      .git-links ul li:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; }
+      .git-links ul li:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; }
+      .git-links ul li a {
+        letter-spacing: 1px; }
 
 /* ==========================================================================
    Media Queries
