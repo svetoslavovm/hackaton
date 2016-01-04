@@ -393,6 +393,15 @@ section.open-source {
   }
 }
 
+/* Donate Page */
+
+.mailing-list {
+  @include flexbox;
+  @include flex-direction(column);
+}
+
+/* End Donate Page */
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

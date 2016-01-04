@@ -528,6 +528,21 @@ section.open-source {
       .git-links ul li a {
         letter-spacing: 1px; }
 
+/* Donate Page */
+.mailing-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/* End Donate Page */
 /* ==========================================================================
    Media Queries
    ========================================================================== */
