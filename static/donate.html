@@ -24,7 +24,7 @@
           })();
         </script>
     </head>
-    <body>
+    <body class="donate">
       <nav>
         <a href="/">hc</a>
         <ul>
@@ -34,46 +34,58 @@
           <li><a class="current" href="javascript:void(0);">Donate</a></li>
         </ul>
       </nav>
-      <div class="text">
-        <p>Thanks for visiting our site!</p>
-        <p>Consider donating to Hackaton Conmmons to keep us up and running!</p>
+      <div class="text paypal">
+        <div>
+          <p>Hackathon Commons secures safe spaces to innovate.</p>
+          <p>Invest in a more open future by supporting Hackathon Commons.</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="TK2BQTLH7S2QE">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
+        </div>
+        <div>
+          <p>Thanks for visiting our site!</p>
+          <p>Consider donating to Hackaton Conmmons to keep us up and running!</p>
+        </div>
       </div>
-      <div class="text">
+      <div class="text mailing">
         <p>Join our mailing list to receive updates from Hackaton Commons</p>
         <section class="mailing-list">
           <div>
             <input type="text" placeholder="Name" name="name"/>
-        </div>
-        <div>
-          <input type="email" placeholder="Email Address" name="email"/>
-        </div>
-        <div>
-          <button class="green">Submit</button>
-        </div>
+          </div>
+          <div>
+            <input type="email" placeholder="Email Address" name="email"/>
+          </div>
         </section>
+        <button class="green">Submit</button>
       </div>
 
       <footer>
-        <div>
+        <div class="left">
           <h3>Hackathon Commons</h3>
           <a href="mainto:info@opeandatanation.com">info@opeandatanation.com</a>
           <p>1215 Hamilton Street NW</br>Washington, DC</br> 860-670-0117</p>
           <p class="bottom">&copy; 2015 Hackathon Commons</p>
         </div>
-        <div>
-          <ul class="socia"
-          <a target="_blank">TW</a>
-          <a target="_blank">FB</a>
-          <a target="_blank">IN</a>
+        <div class="middle">
+          <ul class="social">
+            <a class="icon-facebook" href="https://www.facebook.com/OpenDataNation/" target="_blank"></a>
+            <a class="icon-twitter" href="https://twitter.com/opendatanation" target="_blank"></a>
+            <a class="icon-linkedin2" href="https://www.linkedin.com/company/open-data-nation" target="_blank"></a>
+          </ul>
           <p>Did you find this valuable? Consider donating</p>
           <button class="green" type="button">Donate</button>
         </div>
-        <div>
+        <div class="right">
           <ul>
-            <li><a href="/agreements">Agreements</a></li>
-            <li><a href="/rights">Check Your Rights</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/donate">Donate</a></li>
+            <li><a href="/agreements.html">Agreements</a></li>
+            <li><a href="/rights.html">Check Your Rights</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/donate.html">Donate</a></li>
           </ul>
         </div>
       </footer>
