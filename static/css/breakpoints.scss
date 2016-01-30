@@ -1,0 +1,103 @@
+$xx-small-width:500px;
+$x-small-width: 768px;
+$small-width:   947px;
+$medium-width:  1091px;
+$large-width:   1280px;
+$x-large-width: 1600px;
+$xx-large-width:1920px;
+
+// New grid breakpoints
+$mobile-breakpoint: $x-small-width;
+$tablet-breakpoint: $small-width;
+$desktop-breakpoint: $large-width;
+
+/**  499px < */
+@mixin xx-small {
+  @media (max-width: #{$xx-small-width - 1px}) {
+    @content;
+  }
+}
+
+/** 500px <==> 767px */
+@mixin x-small {
+  @media (min-width: #{$xx-small-width}) and (max-width: #{$x-small-width - 1px}) {
+    @content;
+  }
+}
+
+/** 768px <==> 946px */
+@mixin small {
+  @media (min-width: #{$x-small-width}) and (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+/** 947px <==> 1090px */
+@mixin medium {
+  @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+/** 1091px <==> 1279px */
+@mixin large {
+  @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+/** 1280px <==> 1599px */
+@mixin x-large {
+  @media (min-width: #{$large-width}) and (max-width: #{$x-large-width - 1px}) {
+    @content;
+  }
+}
+
+/** > 1600px */
+@mixin xx-large {
+  @media (min-width: #{$x-large-width}) {
+    @content;
+  }
+}
+
+/** Screen width is wider than value passed in */
+@mixin width-more-than($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+/** Screen width is wider than value passed in and in portrait */
+@mixin width-more-than-and-portrait($width) {
+  @media (min-width: #{$width}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+/** Screen width is wider than value passed in and in landscape */
+@mixin width-more-than-and-landscape($width) {
+  @media (min-width: #{$width}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+/** Screen width is narrow than value passed in -1px */
+@mixin width-less-than($width) {
+  @media (max-width: #{$width - 1px}) {
+    @content;
+  }
+}
+
+/** Screen width is narrow than value passed in -1px in portrait */
+@mixin width-less-than-and-portrait($width) {
+  @media (max-width: #{$width - 1px}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+/** Screen width is narrow than value passed in -1px in landscape */
+@mixin width-less-than-and-landscape($width) {
+  @media (max-width: #{$width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}

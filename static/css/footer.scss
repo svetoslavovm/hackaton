@@ -40,4 +40,10 @@ footer {
       padding: 0;
     }
   }
+
+  @include width-less-than($xx-small-width) {
+    .right {
+      display: none;
+    }
+  }
 }
