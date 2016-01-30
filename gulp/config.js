@@ -26,6 +26,16 @@ module.exports = {
       '!' + dest + '/**.map',
     ],
   },
+  fonts: {
+    dest: dest + '/fonts',
+    src: [
+      src + '/css/fonts/**/fonts/*.eot',
+      src + '/css/fonts/**/fonts/*.svg',
+      src + '/css/fonts/**/fonts/*.ttf',
+      src + '/css/fonts/**/fonts/*.woff',
+    ],
+    watchPath: src + '/fonts/**/fonts/*',
+  },
   sass: {
     dest: dest + '/css',
     src: src + '/css/global.scss',

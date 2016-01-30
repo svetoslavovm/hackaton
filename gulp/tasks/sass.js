@@ -27,6 +27,6 @@ gulp.task('sass', function() {
 
     .pipe(gulp.dest(config.dest))
     .pipe(minify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.dest));
 });

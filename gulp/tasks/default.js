@@ -12,6 +12,7 @@ gulp.task('default', function() {
               [
                 'sass',
                 'move-html',
+                'move-fonts',
               ],
               'server-livereload',
               'watch');
