@@ -1,5 +1,4 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
 html {
     color: #222;
     font-size: 1em;
@@ -76,6 +75,10 @@ p, h1, h2, h3, h4 {
 a {
   color: #8D9093;
   text-decoration: none;
+
+  &:hover {
+    color: #7bf15b;
+  }
 }
 
 nav {
@@ -203,13 +206,6 @@ div.join {
     padding: 5px 15px;
     margin-bottom: 20px;
   }
-}
-
-footer {
-  background-color: #000;
-  @include flexbox;
-  @include justify-content(space-between);
-  padding: 25px 15px 10px;
 }
 
 

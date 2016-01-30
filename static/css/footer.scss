@@ -1,0 +1,43 @@
+footer {
+  background-color: #000;
+  @include flexbox;
+  @include justify-content(space-between);
+  padding: 25px 15px 10px;
+
+
+  .left {
+
+    p.bottom {
+      margin-top: 3vw;
+    }
+  }
+
+  .middle {
+    text-align: center;
+    p {
+      padding: 3vw 0 1vw;
+    }
+  }
+
+  ul.social a {
+    background-color: #eaf0f2;
+    border-radius: 20px;
+    padding: 8px;
+    margin-right: 2vw;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #7bf15b;
+    }
+  }
+
+  .right {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
