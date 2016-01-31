@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:    url('/fonts/icomoon.eot?w2z3a9');
-    src:    url('/fonts/icomoon.eot?w2z3a9#iefix') format('embedded-opentype'),
-        url('/fonts/icomoon.ttf?w2z3a9') format('truetype'),
-        url('/fonts/icomoon.woff?w2z3a9') format('woff'),
-        url('/fonts/icomoon.svg?w2z3a9#icomoon') format('svg');
+    src:    url('/fonts/icomoon.eot?shtygi');
+    src:    url('/fonts/icomoon.eot?shtygi#iefix') format('embedded-opentype'),
+        url('/fonts/icomoon.ttf?shtygi') format('truetype'),
+        url('/fonts/icomoon.woff?shtygi') format('woff'),
+        url('/fonts/icomoon.svg?shtygi#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download4:before {
+    content: "\e925";
+}
 .icon-social-facebook-circular:before {
     content: "\e900";
 }
@@ -44,6 +47,18 @@
 }
 .icon-facebook4:before {
     content: "\e906";
+}
+.icon-download:before {
+    content: "\e921";
+}
+.icon-cloud-download:before {
+    content: "\e922";
+}
+.icon-download2:before {
+    content: "\e923";
+}
+.icon-download3:before {
+    content: "\e924";
 }
 .icon-arrow-up:before {
     content: "\e907";
