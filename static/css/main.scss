@@ -429,8 +429,16 @@ section.open-source {
 
       a {
         letter-spacing: 1px;
+
+        &:hover {
+          color: #000;
+        }
       }
     }
+  }
+
+  .right p {
+    font-size: 12px;
   }
 }
 

@@ -1,0 +1,23 @@
+.agreements {
+
+  .download {
+    a {
+      border-radius: 3px;
+      background-color: #7bf15b;
+      border: 1px solid #b3b3b3;
+      float: left;
+      font-size: 32px;
+      font-size: 32px;
+      margin-right: 10px;
+      padding: 5px 8px;
+
+      &:hover {
+        color: #000;
+      }
+
+      span {
+        display: inherit;
+      }
+    }
+  }
+}
