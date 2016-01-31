@@ -1,0 +1,29 @@
+.about {
+
+  .types-ownership {
+    background-color: #fff;
+    padding: 40px 0 30px;
+  }
+  h2 {
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .contact {
+    background-color: #F3F5F6;
+
+    h2 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .intro {
+    background-color: #fff;
+    padding: 50px 15%;
+
+    @include width-more-than($large-width) {
+      padding: 50px 30%;
+    }
+  }
+}

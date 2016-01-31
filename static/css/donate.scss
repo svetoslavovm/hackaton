@@ -1,0 +1,54 @@
+.donate {
+  .text {
+    background-color: #4a4a4a;
+  }
+
+  .paypal {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+  }
+
+  form {
+    display: block;
+    margin: 20px 0 0px;
+  }
+  .mailing p {
+    border-top: 1px solid #535353;
+    max-width: 300px;
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 25vw;
+
+    @include width-less-than($x-small-width) {
+      width: 35vw;
+    }
+
+    @include width-less-than($xx-small-width) {
+      width: 45vw;
+    }
+  }
+  .mailing-list {
+    padding: 20px 0;
+
+    input {
+      padding: 5px;
+      width: 25vw;
+      margin-bottom: 10px;
+      margin-right: 1.5vw;
+      max-width: 300px;
+      @include width-less-than($x-small-width) {
+        width: 35vw;
+      }
+
+      @include width-less-than($xx-small-width) {
+        width: 45vw;
+      }
+    }
+  }
+}
