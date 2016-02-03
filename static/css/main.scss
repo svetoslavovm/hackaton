@@ -197,6 +197,10 @@ div.agreement {
     margin: 0;
     padding: 0;
 
+    @include width-less-than($xx-small-width) {
+      @include flex-direction(column);
+    };
+
     li {
       padding: 10px 40px;
     }
