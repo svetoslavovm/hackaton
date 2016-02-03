@@ -131,22 +131,47 @@ section.text {
 div.centered-images {
   background-color: #e7eaed;
   @include flexbox;
-  @include justify-content(center);
+  @include width-more-than($x-small-width) {
+    @include justify-content(center);
+  }
 
-  > div {
-    width: 400px;
-    height: 250px;
+  @include width-less-than($x-small-width) {
+    @include flex-direction(column);
+  }
+
+  .first {
+    background:url(http://placeimg.com/400/250/people/grayscale) 0 0 no-repeat;
+  }
+
+  .second {
+    background:url(http://placeimg.com/400/250/tech/grayscale) 0 0 no-repeat;
+  }
+
+  div.first,
+  div.second {
+    background-size: cover;
     @include flexbox;
     @include flex-direction(column);
 
-    > div {
-      flex-grow: 2;
-      text-align: center;
-      padding-top: 10%;
+    width: 400px;
+    height: 250px;
+
+    @include width-less-than($x-small-width) {
+      @include justify-content(center);
+      width: 100%;
+      height: auto;
     }
 
     > div {
       flex-grow: 1;
+      text-align: center;
+      padding: 5% 0;
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
   }
 }
