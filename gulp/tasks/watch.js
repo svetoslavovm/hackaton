@@ -11,5 +11,6 @@ var config = require('../config');
 gulp.task('watch', function() {
   gulp.watch(config.html.watchPath, ['move-html']);
   gulp.watch(config.sass.watchPath, ['sass']);
+  gulp.watch(config.js.watchPath, ['move-html']);
 
 });

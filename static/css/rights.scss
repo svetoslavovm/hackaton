@@ -1,9 +1,12 @@
 .rights {
 
+  .page-content {
+    background-color: #727272;
+  }
+
   .text {
     background-color: #727272;
     color: #ccc;
-
     padding: 150px 25%;
 
     @include width-more-than($large-width) {

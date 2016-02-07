@@ -3,6 +3,12 @@ var src = 'static';
 
 module.exports = {
   dest: dest,
+  js: {
+    dest: dest,
+    watchPath: [
+      src + '/**/*.js',
+    ],
+  },
   html: {
     src: src + '*.html',
     dest: dest,
