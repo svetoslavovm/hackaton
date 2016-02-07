@@ -43,9 +43,13 @@ function setupFlowLogic() {
     }
 
     var $button = $('<button class="green next"></button>');
-    console.log(data.yesIndex);
-    $.data($button, 'next', data.yesIndex);
-    $button.text(data.nextButton);
+    $button
+      .attr('data-next', data.yesIndex)
+      .text(data.nextButton)
+      .on('click', function () {
+        console.log(data.yesIndex);
+      });
+
     $container.find('.buttons').append($button);
   };
 
@@ -55,9 +59,13 @@ function setupFlowLogic() {
     }
 
     var $button = $('<button class="green next"></button>');
-    $.data($button, 'prev', data.noIndex);
-    console.log(data.noIndex);
-    $button.text(data.previousButton);
+    $button
+      .attr('data-prev', data.noIndex)
+      .text(data.previousButton)
+      .on('click', function () {
+        console.log(data.noIndex);
+      });
+;
     $container.find('.buttons').append($button);
   };
 
