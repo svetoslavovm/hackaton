@@ -4,18 +4,115 @@
     background-color: #727272;
   }
 
-  .text {
+  .flow-container {
     background-color: #727272;
     color: #ccc;
-    padding: 150px 25%;
+    font-size: 20px;
+    padding: 40px 40px 60px;
+    margin: 150px 20% 2px;
+    min-height: 300px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
 
     @include width-more-than($large-width) {
-      padding: 150px 30%;
+      margin: 150px 25% 2px;
+      padding: 30px 30px 75px;
+    }
+
+    .buttons {
+      @include flexbox;
+      @include justify-content(space-around);
     }
 
     button {
       margin-top: 40px;
+      background-color: #7BF15B;
+      padding:5px 25px;
+    }
+
+    .legal-example {
+      border: 1px solid red;
+      background-color: #EEF2F7;
+      border: 1px solid #727272;
+      border-bottom: none;
+      display: block;
+      height: auto;
+      left: 0;
+      margin: 0;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      width: auto;
+
+      @include width-more-than($x-small-width) {
+        padding: 50px 20px;
+      }
+
+      .example-text {
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 
+  .legal-example {
+    display: none;
+
+    .example-text {
+      font-size: 14px;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    p.bold {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button-wrap {
+    //background-color: #636363;
+    margin-bottom: 65px;
+
+    @include width-more-than($large-width) {
+      margin-bottom: 100px;
+    }
+  }
+
+  .example-button {
+    background-color: #565656;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 20% 0;
+    padding: 12px 0 10px;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @include width-more-than($large-width) {
+      margin: 0 25% 0;
+    }
+
+    span {
+      letter-spacing: 2px;
+    }
+
+    .up-down {
+      position: absolute;
+      right: 13px;
+      top: 14px;
+    }
+
+    &.displayed {
+      .up-down {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

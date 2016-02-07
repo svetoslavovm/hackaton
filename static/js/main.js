@@ -18,6 +18,7 @@ function setupFlowLogic() {
   var flow = {
     model: {
       data: slides,
+      $legalExample: $('.legal-example'),
     },
     brain: {},
     view: {},
@@ -47,6 +48,7 @@ function setupFlowLogic() {
       .attr('data-next', data.yesIndex)
       .text(data.nextButton)
       .on('click', function () {
+        flow.brain.loadSlide(data.yesIndex);
         console.log(data.yesIndex);
       });
 
@@ -63,14 +65,39 @@ function setupFlowLogic() {
       .attr('data-prev', data.noIndex)
       .text(data.previousButton)
       .on('click', function () {
+        flow.brain.loadSlide(data.noIndex);
         console.log(data.noIndex);
       });
-;
+
     $container.find('.buttons').append($button);
+  };
+
+  flow.view.toggleExampleIcon = function () {
+    $('.example-button').on('click', function () {
+      $(this).toggleClass('displayed');
+
+      if ($(this).hasClass('displayed')) {
+        console.log('showing');
+        flow.view.showExample();
+      } else {
+        console.log('hiding');
+        flow.view.hideExample();
+      }
+    });
+  };
+
+  flow.view.showExample = function () {
+    console.log('ex: ', flow.model.$legalExample);
+    $container.append(flow.model.$legalExample);
+  };
+
+  flow.view.hideExample = function () {
+    $container.find('.legal-example').remove();
   };
 
   flow.brain.init = function () {
     flow.brain.loadSlide(0);
+    flow.view.toggleExampleIcon();
   };
 
   flow.brain.loadSlide = function (i) {
@@ -99,8 +126,8 @@ var slides = {
     noIndex: 2,
     backIndex: 1,
     content: 'At the time of participation, were you under any other employment IP contracts?',
-    nextButton: 'Start',
-    previousButton: '',
+    nextButton: 'Yes',
+    previousButton: 'No',
   },
   2: {
     index: 2,
@@ -108,6 +135,8 @@ var slides = {
     noIndex: 2,
     backIndex: 2,
     content: 'Look at you, already off to a good start! Head on over to the main chart- you\'re ready.',
+    nextButton: 'Yes',
+    previousButton: 'No',
   },
   3: {
     index: 3,
@@ -115,6 +144,8 @@ var slides = {
     noIndex: 2,
     backIndex: 2,
     content: 'This is the thid slide',
+    nextButton: 'Yes',
+    previousButton: 'No',
   },
   4: {
     index: 4,
