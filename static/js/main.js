@@ -24,13 +24,41 @@ function setupFlowLogic() {
   };
 
   flow.model.getSlide = function (i) {
-    console.log(i, flow.model.data[i]);
-    console.log(i, flow.model.data[i].previousButton);
+    //console.log(i, flow.model.data[i]);
+    //console.log(i, flow.model.data[i].previousButton);
     return flow.model.data[i];
   };
 
   flow.view.updateContainer = function (data) {
     $container.html(data.content);
+    var $buttonsDiv = $('<div class="buttons"></div>');
+    $container.append($buttonsDiv);
+    flow.view.addNextButton(data);
+    flow.view.addPreviousButton(data);
+  };
+
+  flow.view.addNextButton = function (data) {
+    if (data.nextButton === false) {
+      return false;
+    }
+
+    var $button = $('<button class="green next"></button>');
+    console.log(data.yesIndex);
+    $.data($button, 'next', data.yesIndex);
+    $button.text(data.nextButton);
+    $container.find('.buttons').append($button);
+  };
+
+  flow.view.addPreviousButton = function (data) {
+    if (data.previousButton === false) {
+      return false;
+    }
+
+    var $button = $('<button class="green next"></button>');
+    $.data($button, 'prev', data.noIndex);
+    console.log(data.noIndex);
+    $button.text(data.previousButton);
+    $container.find('.buttons').append($button);
   };
 
   flow.brain.init = function () {
@@ -43,6 +71,7 @@ function setupFlowLogic() {
   };
 
   flow.brain.init();
+
   return flow;
 }
 
